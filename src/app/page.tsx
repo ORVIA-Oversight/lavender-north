@@ -35,7 +35,7 @@ function Mark() {
 export default function Home() {
   return (
     <main>
-      <div className="announcement">Curated art · artist representation · individual artist websites · commissions</div>
+      <div className="announcement">Curated art · artist representation · websites · social campaigns · collector marketing · exhibitions</div>
       <header className="site-header shell">
         <Mark />
         <nav className="main-nav" aria-label="Primary">
@@ -120,6 +120,24 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="growth-suite">
+        <div className="shell">
+          <div className="growth-head">
+            <div><p className="kicker">The Lavender North Artist Growth Suite</p><h2>You create the work. We build the world around it.</h2></div>
+            <p>Lavender North is designed to do more than host an artist profile. The platform combines presentation, audience-building, campaign support and collector journeys so artists have a clear route from studio to sale.</p>
+          </div>
+          <div className="growth-grid">
+            <article><span>01</span><h3>Your digital home</h3><p>Individual artist website, own domain options, artwork catalogue, commissions, archive, SEO-ready pages and gallery integration.</p></article>
+            <article><span>02</span><h3>Your social pathway</h3><p>Campaign-ready artwork, launch assets, social content plans, collection announcements and clear pathways from posts back to the artist and gallery.</p></article>
+            <article><span>03</span><h3>Your marketing</h3><p>Collector email campaigns, exhibition promotion, press-ready assets and paid-campaign setup on eligible plans. Advertising media spend is separate.</p></article>
+            <article><span>04</span><h3>Your audience</h3><p>Collector enquiries, private viewing journeys, saved works, mailing-list growth, campaign analytics and repeat-contact opportunities.</p></article>
+            <article><span>05</span><h3>Your opportunities</h3><p>Curated exhibitions, physical residency opportunities, art-for-spaces enquiries and selected gallery promotion where the work fits.</p></article>
+            <article><span>06</span><h3>Your commercial pathway</h3><p>Artwork presentation, pricing support, reservations, sales journeys, commissions and performance insight without turning the artist into a marketplace listing.</p></article>
+          </div>
+          <div className="growth-rule"><strong>Important:</strong> artists can subscribe to services and marketing support, but curatorial endorsement cannot be bought.</div>
+        </div>
+      </section>
+
       <section id="for-artists" className="for-artists">
         <div className="shell">
           <div className="section-head artist-intro"><div><p className="kicker">For Artists</p><h2>Three ways to work with Lavender North.</h2></div><p>Services can be purchased. Curatorial endorsement cannot.</p></div>
@@ -134,9 +152,9 @@ export default function Home() {
       <section id="memberships" className="section shell memberships">
         <p className="kicker">Artist Memberships</p><h2>Your work deserves more than a profile page.</h2><p className="lede narrow">Membership gives artists a professional digital home and the tools to present, organise and sell work beautifully. Pricing remains prototype-only until commercial review.</p>
         <div className="pricing-grid">
-          <article><p className="plan">Studio</p><h3>£29<span>/month</span></h3><p>For artists needing a professional digital home.</p><ul><li>Artist profile + site</li><li>Lavender North subdomain</li><li>30 artworks</li><li>Enquiries + commissions</li><li>QR labels + basic analytics</li></ul><a className="btn light" href="#">Apply</a></article>
-          <article className="featured-plan"><p className="plan">Atelier</p><h3>£59<span>/month</span></h3><p>For artists actively exhibiting and selling.</p><ul><li>Own domain connection</li><li>150 artworks + collections</li><li>Viewing rooms + exhibitions</li><li>Collector CRM + newsletter</li><li>Online sales + certificates</li></ul><a className="btn dark" href="#">Apply</a></article>
-          <article><p className="plan">Signature</p><h3>£99<span>/month</span></h3><p>For established artists needing an individual digital presence.</p><ul><li>Unlimited artwork</li><li>Bespoke homepage</li><li>Video integration</li><li>Advanced collector tools</li><li>Campaign + priority support</li></ul><a className="btn light" href="#">Apply</a></article>
+          <article><p className="plan">Studio</p><h3>£29<span>/month</span></h3><p>For artists needing a professional digital home.</p><ul><li>Artist profile + site</li><li>Lavender North subdomain</li><li>30 artworks</li><li>Enquiries + commissions</li><li>QR labels + basic analytics</li><li>Social launch toolkit</li><li>Campaign-ready artwork templates</li></ul><a className="btn light" href="/onboarding">Start onboarding</a></article>
+          <article className="featured-plan"><p className="plan">Atelier</p><h3>£59<span>/month</span></h3><p>For artists actively exhibiting and selling.</p><ul><li>Own domain connection</li><li>150 artworks + collections</li><li>Viewing rooms + exhibitions</li><li>Collector CRM + newsletter</li><li>Online sales + certificates</li><li>Monthly social campaign pack</li><li>Collection launch campaign support</li></ul><a className="btn dark" href="/onboarding">Start onboarding</a></article>
+          <article><p className="plan">Signature</p><h3>£99<span>/month</span></h3><p>For established artists needing an individual digital presence.</p><ul><li>Unlimited artwork</li><li>Bespoke homepage</li><li>Video integration</li><li>Advanced collector tools</li><li>Managed campaign planning</li><li>Paid-ad campaign setup & optimisation</li><li>Priority launch + collector campaigns</li></ul><a className="btn light" href="/onboarding">Start onboarding</a></article>
         </div>
         <p className="prototype-note">Prototype pricing — subject to final commercial review.</p>
       </section>

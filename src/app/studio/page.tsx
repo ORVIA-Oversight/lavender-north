@@ -5,9 +5,9 @@ import { useMemo, useState } from 'react';
 type Msg={role:'user'|'assistant';content:string};
 
 const plans = [
-  {name:'Studio',monthly:29,annual:348},
-  {name:'Atelier',monthly:59,annual:708},
-  {name:'Signature',monthly:99,annual:1188},
+  {name:'Studio',monthly:95,annual:1140,onboarding:295},
+  {name:'Atelier',monthly:195,annual:2340,onboarding:595},
+  {name:'Signature',monthly:395,annual:4740,onboarding:1250},
 ];
 
 export default function StudioPage(){
@@ -70,9 +70,9 @@ export default function StudioPage(){
         <div className="commercial-mini">
           <div><strong>£{selected.monthly}</strong><span>monthly collection</span></div>
           <div><strong>£{selected.annual}</strong><span>12-month commitment</span></div>
-          <div><strong>18%</strong><span>gallery commission</span></div>
+          <div><strong>18%</strong><span>digital/platform gallery commission</span></div>
         </div>
-        <p className="studio-small">Monthly payment spreads the annual membership commitment. A sale does not remove the remaining membership obligation.</p>
+        <p className="studio-small">Current onboarding: £{selected.onboarding}. Monthly collection spreads the annual membership commitment. A sale does not remove the remaining membership obligation. Full physical representation can use separate agreed economics.</p>
       </article>
 
       <article className="studio-card">

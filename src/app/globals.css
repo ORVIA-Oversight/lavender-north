@@ -34,3 +34,53 @@
 .film-card h3{margin:8px 0 8px;font-size:1.35rem}
 .film-card p{margin:0;color:#5d5853;line-height:1.6}
 @media(max-width:800px){.film-grid{grid-template-columns:1fr}.film-guide{padding:72px 0}}
+
+
+/* Artist onboarding */
+.onboarding-page{min-height:100vh;background:#f7f4ee;color:#2e2e2e}
+.onboarding-top{display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;border-bottom:1px solid #d8d0c6;font-size:11px;letter-spacing:.14em}
+.back-link{text-transform:uppercase}
+.onboarding-hero{width:min(980px,90vw);margin:0 auto;padding:90px 0 60px}
+.onboarding-hero h1{font-family:Georgia,serif;font-weight:400;font-size:72px;line-height:1;margin:14px 0 22px}
+.onboarding-hero>p:last-child{font-family:Georgia,serif;font-size:21px;line-height:1.7;color:#625d56;max-width:760px}
+.commercial-summary{width:min(1180px,90vw);margin:0 auto 70px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #cfc7bd;border-bottom:1px solid #cfc7bd}
+.commercial-summary>div{padding:30px;border-right:1px solid #cfc7bd;display:flex;gap:12px;flex-direction:column}
+.commercial-summary>div:last-child{border-right:0}
+.commercial-summary strong{font-family:Georgia,serif;font-size:36px;font-weight:400}
+.commercial-summary span{font-size:13px;line-height:1.6;color:#6b655f}
+.onboarding-form{width:min(980px,90vw);margin:0 auto;padding-bottom:110px}
+.onboarding-form fieldset{border:0;border-top:1px solid #cfc7bd;padding:34px 0 44px;margin:0}
+.onboarding-form legend{padding-right:18px;text-transform:uppercase;letter-spacing:.16em;font-size:11px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 24px}
+.onboarding-form label{display:flex;flex-direction:column;gap:9px;font-size:12px;letter-spacing:.05em}
+.onboarding-form input,.onboarding-form select,.onboarding-form textarea{width:100%;border:1px solid #c8beb2;background:#fff;padding:13px 14px;font:inherit;color:#2e2e2e}
+.onboarding-form textarea{resize:vertical}
+.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.check{flex-direction:row!important;align-items:flex-start;background:#fff;border:1px solid #d2c9be;padding:14px 16px;gap:10px!important}
+.check input{width:auto;margin-top:2px}
+.check-row{margin-top:12px}
+.field-help{font-family:Georgia,serif;color:#675f57;line-height:1.6;max-width:760px}
+.terms-box{background:#eee8df;padding:34px!important;margin-top:16px!important;border:1px solid #cfc7bd!important}
+.terms-box p{line-height:1.7;color:#5c5751}
+.consent{margin-top:22px}
+.submit-onboarding{margin-top:32px;background:#2e2e2e;color:#fff;border:0;padding:16px 24px;text-transform:uppercase;letter-spacing:.12em;font-size:11px;cursor:pointer}
+.submit-onboarding:disabled{opacity:.6}
+.success-msg{margin-top:20px;padding:14px 16px;background:#e4ece2}
+.error-msg{margin-top:20px;padding:14px 16px;background:#f3dfdb}
+.growth-suite{background:#ddd2e6;padding:110px 0}
+.growth-head{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end}
+.growth-head h2{font-family:Georgia,serif;font-size:58px;font-weight:400;line-height:1.08;margin:12px 0 0}
+.growth-head>p{font-family:Georgia,serif;font-size:18px;line-height:1.7}
+.growth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(46,46,46,.16);margin-top:50px}
+.growth-grid article{background:#f7f4ee;padding:30px;min-height:250px}
+.growth-grid span{font-size:10px;letter-spacing:.18em;color:#867694}
+.growth-grid h3{font-family:Georgia,serif;font-size:28px;font-weight:400;margin:14px 0}
+.growth-grid p{color:#625d56;line-height:1.65}
+.growth-rule{margin-top:26px;border-top:1px solid rgba(46,46,46,.2);padding-top:20px;font-size:13px}
+@media(max-width:800px){
+ .onboarding-hero h1{font-size:48px}
+ .commercial-summary,.growth-head,.form-grid,.check-grid{grid-template-columns:1fr}
+ .commercial-summary>div{border-right:0;border-bottom:1px solid #cfc7bd}
+ .commercial-summary>div:last-child{border-bottom:0}
+ .growth-grid{grid-template-columns:1fr}
+}

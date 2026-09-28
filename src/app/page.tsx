@@ -112,6 +112,14 @@ export default function Home() {
         <div className="collector-copy"><p className="kicker">Lavender North Collectors</p><h2>Discover something worth keeping.</h2><p>Join free for early access to new work, private previews, artist introductions, exhibition invitations and commission opportunities.</p><a className="btn dark" href="#">Join Collectors</a></div>
       </section>
 
+      <section className="film-guide shell">
+        <div className="section-head"><div><p className="kicker">The Lavender North Experience</p><h2>See how the artist journey comes together.</h2></div><p>Two short films show the vision: presentation first, then the full support model behind the artist.</p></div>
+        <div className="film-grid">
+          <article className="film-card"><video controls preload="metadata" playsInline poster="/gallery/art-09.png"><source src="/media/lavender-north-film-01.mp4" type="video/mp4"/></video><div><span>01</span><h3>From studio to gallery</h3><p>How Lavender North presents work, creates context and gives artists a premium stage.</p></div></article>
+          <article className="film-card"><video controls preload="metadata" playsInline poster="/gallery/art-18.png"><source src="/media/lavender-north-film-02.mp4" type="video/mp4"/></video><div><span>02</span><h3>From presence to growth</h3><p>Websites, campaigns, collector journeys, private views and commercial momentum around the artist.</p></div></article>
+        </div>
+      </section>
+
       <section id="for-artists" className="for-artists">
         <div className="shell">
           <div className="section-head artist-intro"><div><p className="kicker">For Artists</p><h2>Three ways to work with Lavender North.</h2></div><p>Services can be purchased. Curatorial endorsement cannot.</p></div>

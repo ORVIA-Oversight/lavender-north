@@ -60,9 +60,9 @@ export default function ArtistOnboarding() {
     </section>
 
     <section className="commercial-summary">
-      <div><strong>18%</strong><span>gallery commission on artwork sales generated through Lavender North</span></div>
-      <div><strong>12 months</strong><span>minimum membership term, even where membership is paid monthly</span></div>
-      <div><strong>Human curation</strong><span>subscription never buys curatorial endorsement or exhibition selection</span></div>
+      <div><strong>18%</strong><span>working digital/platform gallery commission on qualifying sales generated through Lavender North</span></div>
+      <div><strong>12 months</strong><span>membership commitment, even where the annual commitment is collected monthly</span></div>
+      <div><strong>Human curation</strong><span>subscription buys services and growth support — never curatorial endorsement or exhibition selection</span></div>
     </section>
 
     <form className="onboarding-form" onSubmit={submit}>
@@ -103,7 +103,8 @@ export default function ArtistOnboarding() {
       </fieldset>
 
       <fieldset className="terms-box"><legend>06 · Commercial principles</legend>
-        <p>Lavender North currently works on a proposed <strong>18% gallery commission</strong> on sales generated through Lavender North, alongside the selected membership plan. Membership is a <strong>12-month commitment</strong>. Choosing monthly payments spreads that annual commitment; it does not convert the membership into a month-to-month arrangement. A sale in month one does not cancel the remaining membership commitment.</p>
+        <p>Lavender North currently works on a proposed <strong>18% digital/platform gallery commission</strong> on qualifying sales generated through Lavender North, alongside the selected membership plan. Membership is a <strong>12-month commitment</strong>. Monthly collection spreads the annual commitment; it does not convert the membership into a month-to-month arrangement. A sale in month one does not cancel the remaining membership commitment.</p>
+        <p>Current working membership levels are <strong>Studio £95/month</strong>, <strong>Atelier £195/month</strong> and <strong>Signature £395/month</strong>, with separate onboarding charges and paid-advertising media spend where applicable. Full physical representation or exhibition handling may use a separately agreed commission because it involves additional gallery services and cost.</p>
         <p>Final artist terms, cancellation rights, VAT treatment, refunds, commission attribution and payment timing will be set out in the signed Artist Agreement. This onboarding is not itself the final contract.</p>
         <label className="check consent"><input required type="checkbox" name="accepted_commercial_principles"/><span>I understand these proposed commercial principles and want Lavender North to continue my onboarding.</span></label>
       </fieldset>

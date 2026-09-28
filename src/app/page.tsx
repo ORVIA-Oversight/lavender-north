@@ -1,24 +1,33 @@
+import Image from 'next/image';
+
 const works = [
-  { id: '01', title: 'North Light', artist: 'Amelia Hart', meta: 'Oil on linen · 2026', price: '£2,850', cls: 'art-a' },
-  { id: '02', title: 'Still Air', artist: 'Daniel Rowe', meta: 'Mixed media · 2026', price: '£1,950', cls: 'art-b' },
-  { id: '03', title: 'After Rain', artist: 'Elena March', meta: 'Oil & wax · 2025', price: '£3,400', cls: 'art-c' },
-  { id: '04', title: 'Quiet Form', artist: 'Theo Mercer', meta: 'Pigment on panel · 2026', price: 'Price on request', cls: 'art-d' },
+  { id:'01', title:'North Light', artist:'Amelia Hart', meta:'Oil on linen · 2026', price:'£2,850', src:'/gallery/art-01.png' },
+  { id:'02', title:'Still Air', artist:'Daniel Rowe', meta:'Mixed media · 2026', price:'£1,950', src:'/gallery/art-02.png' },
+  { id:'03', title:'After Rain', artist:'Elena March', meta:'Oil & wax · 2025', price:'£3,400', src:'/gallery/art-03.png' },
+  { id:'04', title:'Quiet Form', artist:'Theo Mercer', meta:'Pigment on panel · 2026', price:'Price on request', src:'/gallery/art-04.png' },
+  { id:'05', title:'Golden Strata', artist:'Amelia Hart', meta:'Mixed media · 2026', price:'£2,250', src:'/gallery/art-05.png' },
+  { id:'06', title:'Passage', artist:'Iris Vale', meta:'Oil & gold leaf · 2026', price:'£4,200', src:'/gallery/art-06.png' },
+  { id:'07', title:'Orchard Light', artist:'Elena March', meta:'Oil on canvas · 2026', price:'£3,100', src:'/gallery/art-07.png' },
+  { id:'08', title:'Still Life No. 4', artist:'Daniel Rowe', meta:'Oil & plaster · 2026', price:'£2,600', src:'/gallery/art-08.png' },
 ];
 
 const artists = [
-  { name: 'Lindsay McGowan', note: 'Founding Artist · archive being prepared', cls: 'portrait-lindsay' },
-  { name: 'Amelia Hart', note: 'Demo Artist · Painting', cls: 'portrait-a' },
-  { name: 'Daniel Rowe', note: 'Demo Artist · Mixed Media', cls: 'portrait-b' },
+  { name:'Lindsay McGowan', note:'Founding Artist · archive being prepared', src:'/gallery/art-11.png' },
+  { name:'Amelia Hart', note:'Demo Artist · Painting', src:'/gallery/art-12.png' },
+  { name:'Daniel Rowe', note:'Demo Artist · Mixed Media', src:'/gallery/art-13.png' },
+  { name:'Elena March', note:'Demo Artist · Landscape', src:'/gallery/art-14.png' },
+];
+
+const edit = [
+  '/gallery/art-15.png','/gallery/art-16.png','/gallery/art-17.png',
+  '/gallery/art-18.png','/gallery/art-19.png','/gallery/art-20.png'
 ];
 
 function Mark() {
   return (
     <div className="brand-lockup" aria-label="Lavender North">
       <div className="monogram"><span className="door"/><span className="l">L</span><span className="n">N</span><span className="sprig">⌇</span></div>
-      <div>
-        <div className="wordmark">LAVENDER NORTH</div>
-        <div className="descriptor">CONTEMPORARY ART GALLERY</div>
-      </div>
+      <div><div className="wordmark">LAVENDER NORTH</div><div className="descriptor">CONTEMPORARY ART GALLERY</div></div>
     </div>
   );
 }
@@ -35,12 +44,13 @@ export default function Home() {
         <div className="utility"><button>Search</button><button>Saved</button><button>Account</button></div>
       </header>
 
-      <section className="hero">
-        <div className="hero-art" role="img" aria-label="Demo abstract gallery artwork"><div className="canvas-one"/><div className="canvas-two"/><div className="canvas-three"/></div>
+      <section className="hero hero-photo">
+        <Image src="/gallery/art-09.png" alt="Lavender North featured artwork" fill priority sizes="100vw" className="cover-image" />
+        <div className="hero-shade"/>
         <div className="hero-copy shell">
           <p className="eyebrow">LAVENDER NORTH</p>
           <h1>Art worth living with.</h1>
-          <p>Lavender North brings artists, collectors and remarkable work together through carefully curated exhibitions, individual artist spaces and a gallery designed for discovery.</p>
+          <p>A contemporary gallery built around discovery, curation and beautifully presented artists.</p>
           <div className="actions"><a className="btn dark" href="#art">Explore Art</a><a className="btn light" href="#artists">Meet the Artists</a></div>
         </div>
       </section>
@@ -52,11 +62,11 @@ export default function Home() {
       </section>
 
       <section id="exhibitions" className="feature-grid shell">
-        <div className="feature-image feature-return"><span className="image-label">PROTOTYPE EXHIBITION</span></div>
+        <div className="feature-image real-feature"><Image src="/gallery/art-10.png" alt="Featured Lavender North exhibition artwork" fill sizes="(max-width:900px) 100vw, 60vw" className="cover-image"/></div>
         <div className="feature-copy">
           <p className="kicker">Featured Exhibition</p>
           <h2>Returning to the Canvas</h2>
-          <p>A new body of work and archive selection from an established artist returning to practice.</p>
+          <p>A relaunch exhibition concept designed to bring an established artist&apos;s archive and new work back into public view.</p>
           <p className="quiet">Lindsay McGowan is shown as the founding-artist prototype. Biography and historical archive content remain intentionally unclaimed until genuine material is supplied.</p>
           <a className="text-link" href="#artists">Enter Exhibition <span>→</span></a>
         </div>
@@ -65,7 +75,12 @@ export default function Home() {
       <section id="art" className="section shell">
         <div className="section-head"><div><p className="kicker">Discover Art</p><h2>Selected works</h2></div><button className="refine">Refine +</button></div>
         <div className="art-grid">
-          {works.map((w) => <article className="work-card" key={w.id}><div className={`art-thumb ${w.cls}`}><span>{w.id}</span></div><div className="work-meta"><div><h3>{w.title}</h3><p>{w.artist}</p><small>{w.meta}</small></div><strong>{w.price}</strong></div></article>)}
+          {works.map((w) => (
+            <article className="work-card" key={w.id}>
+              <div className="art-thumb real-art"><Image src={w.src} alt={w.title} fill sizes="(max-width:720px) 100vw, 50vw" className="cover-image"/><span>{w.id}</span></div>
+              <div className="work-meta"><div><h3>{w.title}</h3><p>{w.artist}</p><small>{w.meta}</small></div><strong>{w.price}</strong></div>
+            </article>
+          ))}
         </div>
         <div className="center"><a className="btn light" href="#">Browse all work</a></div>
       </section>
@@ -75,17 +90,25 @@ export default function Home() {
           <div className="curator-mark">LN</div>
           <div><p className="kicker">The Curator&apos;s Edit</p><h2>Work we believe deserves closer attention.</h2><p>Artists cannot buy inclusion here. Membership level never determines artistic endorsement.</p><span className="seal">SELECTED BY LAVENDER NORTH</span></div>
         </div>
+        <div className="curator-strip">
+          {edit.map((src,i)=><div className="curator-strip-image" key={src}><Image src={src} alt={`Curator selection ${i+1}`} fill sizes="17vw" className="cover-image"/></div>)}
+        </div>
       </section>
 
       <section id="artists" className="section shell">
         <div className="section-head"><div><p className="kicker">Artists</p><h2>Meet the artists</h2></div><a className="text-link" href="#">View all artists →</a></div>
-        <div className="artist-grid">
-          {artists.map((a) => <article className="artist-card" key={a.name}><div className={`artist-visual ${a.cls}`}/><h3>{a.name}</h3><p>{a.note}</p><a href="#" className="text-link">View Artist →</a></article>)}
+        <div className="artist-grid artist-grid-four">
+          {artists.map((a) => (
+            <article className="artist-card" key={a.name}>
+              <div className="artist-visual real-artist"><Image src={a.src} alt={`${a.name} featured work`} fill sizes="(max-width:720px) 100vw, 25vw" className="cover-image"/></div>
+              <h3>{a.name}</h3><p>{a.note}</p><a href="#" className="text-link">View Artist →</a>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="collector-split shell">
-        <div className="collector-image"><div className="frame-art"/></div>
+        <div className="collector-image real-collector"><Image src="/gallery/art-18.png" alt="Lavender North collector selection" fill sizes="60vw" className="cover-image"/></div>
         <div className="collector-copy"><p className="kicker">Lavender North Collectors</p><h2>Discover something worth keeping.</h2><p>Join free for early access to new work, private previews, artist introductions, exhibition invitations and commission opportunities.</p><a className="btn dark" href="#">Join Collectors</a></div>
       </section>
 
@@ -111,8 +134,8 @@ export default function Home() {
       </section>
 
       <section id="builder" className="builder shell">
-        <div><p className="kicker">Lavender North Builder</p><h2>One platform. Your identity. Your own domain.</h2><p>Builder is the customer-facing website service replacing the web.orvia working name. Artists choose a visual direction and manage their site without code.</p><div className="template-row"><span>White Cube</span><span>Atelier</span><span>Editorial</span><span>Collector</span></div></div>
-        <div className="browser-mock"><div className="browser-top"><i/><i/><i/></div><div className="mock-page"><p>LINDSAY McGOWAN</p><div className="mock-art"/><small>Represented digitally by Lavender North</small></div></div>
+        <div><p className="kicker">Lavender North Builder</p><h2>One platform. Your identity. Your own domain.</h2><p>Artists choose a visual direction and manage their site without code while Lavender North keeps presentation consistent, fast and commercially credible.</p><div className="template-row"><span>White Cube</span><span>Atelier</span><span>Editorial</span><span>Collector</span></div></div>
+        <div className="browser-mock"><div className="browser-top"><i/><i/><i/></div><div className="mock-page"><p>LINDSAY McGOWAN</p><div className="mock-art real-mock"><Image src="/gallery/art-17.png" alt="Artist website example" fill sizes="50vw" className="cover-image"/></div><small>Represented digitally by Lavender North</small></div></div>
       </section>
 
       <section id="visit" className="visit-band"><div className="shell visit-grid"><div><p className="kicker">Lavender North — In Residence</p><h2>A gallery that can move before it settles.</h2></div><div><p>Lavender North can operate from selected exhibition and residency spaces while developing a permanent gallery programme. No permanent premises are claimed in this prototype.</p><a className="text-link" href="#">View programme →</a></div></div></section>
